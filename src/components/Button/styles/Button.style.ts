@@ -14,7 +14,7 @@ export const Button = styled.a((props: StyledButtonProps): FlattenSimpleInterpol
 
   &:hover {
     &::before {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -27,7 +27,7 @@ export const Button = styled.a((props: StyledButtonProps): FlattenSimpleInterpol
     right: -2px;
     bottom: -2px;
     background: ${props.theme.colours.soundcloud1};
-    transform: translateX(-100%);
+    transform: translateY(100%);
     transition: 0.4s all ease;
   }
 

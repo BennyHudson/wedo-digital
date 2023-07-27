@@ -23,17 +23,16 @@ export const Head = () => {
     <>
       <title>wedo.digital</title>
       <meta name='description' content='wedo.digital | Website Design & Development made in Fleet, Hampshire' />
-      {/* <link rel='canonical' href={seo.canonical} />
-      <meta property='og:type' content={seo.opengraphType} />
-      <meta property='og:title' content={seo.opengraphTitle} />
-      <meta property='og:description' content={seo.metaDesc} />
-      <meta property='og:url' content={seo.opengraphUrl} />
-      <meta property='og:image' content={seo.opengraphImage?.sourceUrl} />
-      <meta name='twitter:title' content={seo.twitterTitle} />
-      <meta name='twitter:description' content={seo.twitterDescription} />
-      <meta property='twitter:image' content={seo.opengraphImage?.sourceUrl} />
+      <link rel='canonical' href='/' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content='wedo.digital' />
+      <meta property='og:description' content='wedo.digital | Website Design & Development made in Fleet, Hampshire' />
+      <meta property='og:url' content='https://wedo.digital' />
+      <meta property='og:image' content='/wedo-digital.png' />
+      <meta name='twitter:title' content='wedo.digital' />
+      <meta name='twitter:description' content='wedo.digital | Website Design & Development made in Fleet, Hampshire' />
+      <meta property='twitter:image' content='/wedo-digital.png' />
       <meta name='twitter:card' content={'summary'} />
-      <script type='application/ld+json'>{JSON.stringify(seo.schema?.raw)}</script> */}
     </>
   )
 }

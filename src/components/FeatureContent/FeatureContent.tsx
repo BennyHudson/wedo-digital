@@ -3,17 +3,13 @@ import React, { useState } from 'react'
 
 import * as Styled from './styles/FeatureContent.style'
 
-import type { FeatureContentProps } from './FeatureContent.types'
 import Heading from '@components/Heading'
 import Typed from 'react-typed'
 import ScrollAnimation from 'react-animate-on-scroll'
 import Button from '@components/Button'
 
-const FeatureContent: FC<FeatureContentProps> = ({
-  // add props
-}: FeatureContentProps): ReactElement => {
+const FeatureContent: FC= (): ReactElement => {
   const [typed, setTyped] = useState(false)
-  const [animated, setAnimated] = useState(false)
 
   const typedArrays = [
     'development',
@@ -47,7 +43,7 @@ const FeatureContent: FC<FeatureContentProps> = ({
         </Styled.TextWrapper>
         <Styled.ButtonWrapper>
           {typed && (
-            <ScrollAnimation animateIn='animate__animated animate__fadeInDown' animateOnce afterAnimatedIn={() => setAnimated(true)}>
+            <ScrollAnimation animateIn='animate__animated animate__fadeInDown' animateOnce>
               <div>
                 <Button text='Work with us' href='mailto:ben@wedo.digital' />
               </div>

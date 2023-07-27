@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 import type { StyledFeatureContentProps } from './FeatureContent.style.types'
 
-export const FeatureContent = styled.div((props: StyledFeatureContentProps): FlattenSimpleInterpolation => css`
+export const FeatureContent = styled.div((): FlattenSimpleInterpolation => css`
   position: relative;
   display: flex;
   align-items: center;
