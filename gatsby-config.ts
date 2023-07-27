@@ -60,7 +60,13 @@ const config: GatsbyConfig = {
         ],
         display: 'swap'
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
   ],
 }
 

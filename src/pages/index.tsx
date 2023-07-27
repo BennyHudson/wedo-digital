@@ -23,7 +23,7 @@ export const Head = () => {
     <>
       <title>wedo.digital</title>
       <meta name='description' content='wedo.digital | Website Design & Development made in Fleet, Hampshire' />
-      <link rel='canonical' href='/' />
+      <link rel='canonical' href='https://wedo.digital/' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='wedo.digital' />
       <meta property='og:description' content='wedo.digital | Website Design & Development made in Fleet, Hampshire' />
