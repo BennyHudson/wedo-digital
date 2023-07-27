@@ -1,53 +1,15 @@
 import type { FC, ReactElement} from 'react'
-import React, { useState } from 'react'
-
-import Typed from 'react-typed'
+import React from 'react'
 
 import Flood from '@components/Flood'
-import Heading from '@components/Heading'
 import Wrapper from '@components/Wrapper'
-import Button from '@components/Button'
-import ScrollAnimation from 'react-animate-on-scroll'
+import FeatureContent from '@components/FeatureContent'
 
 const HomePage: FC = (): ReactElement => {
-  const [typed, setTyped] = useState(false)
-
-  const typedArrays = [
-    'development',
-    'design',
-    'ecommerce',
-    'ux',
-    'digital'
-  ]
-
   return (
     <>
       <Wrapper>
-        <Heading
-          level={1}
-          weight={1}
-          size={6}
-          noMargin
-        >
-          wedo.
-          <>
-            {typed ? 'digital' :
-              <Typed
-                strings={typedArrays}
-                typeSpeed={50}
-                showCursor={false}
-                onComplete={() => setTyped(true)}
-              />
-            }
-          </>
-        </Heading>
-        {typed && (
-          <ScrollAnimation animateIn='animate__animated animate__fadeInUp' animateOnce>
-            <div>
-              <Button text='Work with us' href='mailto:ben@wedo.digital' />
-            </div>
-          </ScrollAnimation>
-        )}
+        <FeatureContent />
       </Wrapper>
       <Flood />
     </>
@@ -55,3 +17,23 @@ const HomePage: FC = (): ReactElement => {
 }
 
 export default HomePage
+
+export const Head = () => {
+  return (
+    <>
+      <title>wedo.digital</title>
+      <meta name='description' content='wedo.digital | Website Design & Development made in Fleet, Hampshire' />
+      {/* <link rel='canonical' href={seo.canonical} />
+      <meta property='og:type' content={seo.opengraphType} />
+      <meta property='og:title' content={seo.opengraphTitle} />
+      <meta property='og:description' content={seo.metaDesc} />
+      <meta property='og:url' content={seo.opengraphUrl} />
+      <meta property='og:image' content={seo.opengraphImage?.sourceUrl} />
+      <meta name='twitter:title' content={seo.twitterTitle} />
+      <meta name='twitter:description' content={seo.twitterDescription} />
+      <meta property='twitter:image' content={seo.opengraphImage?.sourceUrl} />
+      <meta name='twitter:card' content={'summary'} />
+      <script type='application/ld+json'>{JSON.stringify(seo.schema?.raw)}</script> */}
+    </>
+  )
+}
