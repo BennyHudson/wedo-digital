@@ -1,0 +1,1 @@
+export { wedoTheme } from './wedoTheme'
