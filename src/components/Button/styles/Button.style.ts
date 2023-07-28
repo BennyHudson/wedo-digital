@@ -2,15 +2,23 @@ import type { FlattenSimpleInterpolation } from 'styled-components'
 import styled, { css } from 'styled-components'
 
 import type { StyledButtonProps } from './Button.style.types'
+import respondTo from '@mixins/respondTo'
 
 export const Button = styled.a((props: StyledButtonProps): FlattenSimpleInterpolation => css`
   color: ${props.theme.colours.white};
-  padding: ${props.theme.spacing[1]}px ${props.theme.spacing[6]}px;
+  padding: ${props.theme.spacing[1]}px ${props.theme.spacing[3]}px;
+  font-size: ${props.theme.typography.paragraph[2].fontSize};
+  text-align: center;
   text-decoration: none;
   position: relative;
   overflow: hidden;
   display: inline-block;
   border-radius: 60px;
+
+  ${respondTo.md(css`
+    padding: ${props.theme.spacing[1]}px ${props.theme.spacing[6]}px;
+    font-size: ${props.theme.typography.paragraph[3].fontSize};
+  `)}
 
   &:hover {
     &::before {

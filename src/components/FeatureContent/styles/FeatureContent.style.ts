@@ -23,4 +23,8 @@ export const ButtonWrapper = styled.div((): FlattenSimpleInterpolation => css`
   top: 50%;
   left: 50%;
   transform: translate(-50%, 100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `)
